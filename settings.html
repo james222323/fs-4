@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboards</title>
+    <link rel="stylesheet" href="css/leaderboards.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+      .key-label {
+            font-size: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .key {
+            font-size: 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            background-color: transparent;
+            border: 1px solid #8668FF; /* You can add a border if needed */
+            max-width: 40px;
+            color: #ffffff;
+        }
+        .key:focus {
+            border-color: #8668FF; /* Change border color on focus */
+             outline: none; /* Remove the default focus outline (optional) */
+        }
+        .url-label {
+            font-size: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .url {
+            font-size: 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            background-color: transparent;
+            border: 1px solid #8668FF; /* You can add a border if needed */
+            max-width:3000px;
+            color: #ffffff;
+        }
+        .url:focus {
+            border-color: #8668FF; /* Change border color on focus */
+             outline: none; /* Remove the default focus outline (optional) */
+        }
+
+    </style>
+</head>
+<body>
+
+  <nav class="tgcnavbar">
+    <div class="navbuttons">
+        <div class="logo">
+            <img src="images/main.png" alt="">
+        </div>
+        <a href="#"><i class="material-icons"></i></a>
+        <a href="index.html"><i class="material-icons">home</i>Home</a>
+         <a href="sm.html"><i class="material-icons">sports_esports</i>Games</a>
+        <a href="javascript:void(0);" class="nav-link" onclick="openLink()"><i class="material-icons">casino</i>Random</a>
+        <a href="leaderboards.html"><i class="material-icons">leaderboard</i>Leaderboards</a>
+        <a href="form.html"><i class="material-icons">article</i>Request</a>
+        <a href="settings.html"><i class="material-icons">settings</i>Settings</a>
+        
+
+    </div>
+</nav>
+    <!-- Your existing HTML code -->
+    <h1 class="title">Settings</h1>
+    <div class="game">
+        <div id="game-content" class="game-content">
+            <h1>
+                <i class="fa-solid fa-gamepad fa-sm" style="color: #ffffff;"></i> PANIC KEY
+            </h1>
+            <p class="by">
+                <i class="fa-solid fa-user fa-xs" style="color: #ffffff;"></i>A key you press when a Teacher is coming so you can easily go to a school work site<span style="font-weight: 600;"></span>
+            </p>
+            <label for="key-input" class="key-label">
+                <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> Key:
+            </label>
+            <input type="text" id="key-input" class="key" value="" maxlength="1">
+            <label for="url-input" class="url-label">
+              <i class="fa-solid fa-trophy fa-xs" style="color: #ffffff;"></i> URL:
+          </label>
+          <input type="text" id="url-input" class="url" value="" maxlength="10000">
+        </div>
+    </div>
+
+
+    
+    <script>
+        // Retrieve the stored value from local storage
+        document.getElementById('key-input').value = localStorage.getItem('userInput') || '';
+
+        // Listen for input changes and store the value in local storage
+        document.getElementById('key-input').addEventListener('input', function () {
+            localStorage.setItem('userInput', this.value);
+        });
+
+        document.getElementById('url-input').value = localStorage.getItem('webInput') || '';
+
+// Listen for input changes and store the value in local storage
+document.getElementById('url-input').addEventListener('input', function () {
+    localStorage.setItem('webInput', this.value);
+});
+    </script>
+
+
+<footer class="footer">
+    <p class="footertext">&copy; 2023 FUSION. All rights reserved.</p>
+</footer>
+
+
+<script src="panickey.js"></script>
+<script src="js/randomgame.js"></script>
+</body>
+</html>

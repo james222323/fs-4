@@ -1,0 +1,22 @@
+ .record-label {
+            font-size: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .record {
+            font-size: 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            background-color: transparent;
+            border: 1px solid #8668FF; /* You can add a border if needed */
+            max-width: 40px;
+            color: #ffffff;
+        }
+        .record:focus {
+            border-color: #8668FF; /* Change border color on focus */
+             outline: none; /* Remove the default focus outline (optional) */
+        }
+
+
+
+        <input type="text" id="record-input" class="record" value=" " maxlength="2">

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Retro Bowl",
+    "imageUrl": "/images/games/retro-bowl.jpg",
+    "link": "view.html?game=games/retro-bowl/index.html&title=Retro Bowl&image=images/games/retro-bowl.jpg&creator=New Star Games&file=Retro-Bowlfile",
+    "by": "New Star Games"
+  },
+  {
+    "name": "Monkey Mart",
+    "imageUrl": "/images/games/monkey-mart.png",
+    "link": "view.html?game=games/monkey-mart/index.html&title=Monkey Mart&image=images/games/monkey-mart.png&creator=TinyDobbins&file=monkey-martfile",
+    "by": "TinyDobbins"
+  },
+  {
+    "name": "1v1 lol",
+    "imageUrl": "/images/games/1v1-lol.png",
+    "link": "view.html?game=games/1v1-lol/index.html&title=1v1 LOL&image=images/games/1v1-lol.png&creator=Lior Alterman&file=1v1-lolfile",
+    "by": "Lior Alterman"
+  },
+  {
+    "name": "Basketball Stars",
+    "imageUrl": "/images/games/basketball-stars.png",
+    "link": "view.html?game=games/basketball-stars/index.html&title=Basketball Stars&image=images/games/basketball-stars.png&creator=Madpuffers&file=basketball-starsfile",
+    "by": "Madpuffers"
+  },
+  {
+    "name": "Smash Remix",
+    "imageUrl": "/images/games/smash.jpg",
+    "link": "view.html?game=games/smash/index.html&title=Smash Remix&image=images/games/smash.jpg&creator=The Smashfather&file=smashfile",
+    "by": "The Smashfather"
+  },
+  {
+    "name": "Slope",
+    "imageUrl": "/images/games/slope.jpg",
+    "link": "view.html?game=games/slope/index.html&title=Slope&image=images/games/slope.jpg&creator=Rob Kay&file=slopefile",
+    "by": "Rob Kay"
+  }
+  
+  
+
+]

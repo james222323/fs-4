@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>veiw</title>
+      <link rel="stylesheet" href="css/view.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <body>
+
+
+
+      <nav class="tgcnavbar">
+         <div class="navbuttons">
+             <div class="logo">
+                 <img src="images/main.png" alt="">
+             </div>
+             <a href="#"><i class="material-icons"></i></a>
+             <a href="index.html"><i class="material-icons">home</i>Home</a>
+             <a href="sm.html"><i class="material-icons">sports_esports</i>Games</a>
+             <a href="javascript:void(0);" class="nav-link" onclick="openLink()"><i class="material-icons">casino</i>Random</a>
+             <a href="leaderboards.html"><i class="material-icons">leaderboard</i>Leaderboards</a>
+             <a href="form.html"><i class="material-icons">article</i>Request</a>
+             <a href="settings.html"><i class="material-icons">settings</i>Settings</a>
+             <!-- Add more navigation items as needed -->
+         </div>
+     </nav>
+
+      </div>
+      <div id="gameframe">
+         <div class="gameDisplay">
+            <div class="game">
+               <iframe id="iframe" src="game-file"></iframe>
+            </div>
+            <div class="options">
+               <div class="left">
+                  <div class="gametext">
+                     <img src="gameimage" class="gameicon" />
+                     <div class="margin">
+                        <div class="flex">
+                           <h1 class="titletext">game name</h1>
+                        </div>
+                        <span class="bytext">By creator</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="right">
+                  <img id="reloadbtn" src="images/reload.png" class="reloadbtn" border="0" />
+                  <script src="../../js/reload.js"></script>
+                  <img onclick="openFullscreen();" type="fullscreen" src="images/fullscreen.png" class="fullscreenbtn" border="0" />
+                  <script src="js/fullscreen.js"></script>
+                </div>
+            </div>
+         </div>
+      </div>
+
+      <center>
+         <div class="recommendedgames">
+            <h1 class="recommendedtext">Recommended Games</h1>
+            <a id="game1Link" href="#">
+               <img id="game1" class="recommendedgameicon">
+            </a>
+            <a id="game2Link" href="#">
+               <img id="game2" class="recommendedgameicon">
+            </a>
+            <a id="game3Link" href="#">
+               <img id="game3" class="recommendedgameicon">
+            </a>
+            <a id="game4Link" href="#">
+               <img id="game4" class="recommendedgameicon">
+            </a>
+      </div>
+      </div>
+      <div class="footer">
+         <h1 class="footertext">© 2022-2023 FUSION</h1>
+         </center>
+         <button onclick="backtogame()" id="backtogame"><i class="fa-solid fa-arrow-up fa-xs" style="color: #ffffff;"></i>‎      ⬆      ‎ </button>
+         <script src="js/backtotop.js"></script>
+      </div>
+
+</div>
+</body>
+</html>
+      
+      <script src="js/view.js"></script>
+      <script src="js/randomgame.js"></script>
+      <script src="js/recgames.js"></script>
+      <script src="js/panickey.js"></script>
+   </body>
+
+</html> 
