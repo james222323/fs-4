@@ -58,26 +58,37 @@
       <center>
          <div class="recommendedgames">
             <h1 class="recommendedtext">Recommended Games</h1>
-            <a id="game1Link" href="#">
-               <img id="game1" class="recommendedgameicon">
+            <a id="game1Link" href="#" draggable="false">
+                <img id="game1" class="recommendedgameicon">
             </a>
-            <a id="game2Link" href="#">
-               <img id="game2" class="recommendedgameicon">
+            <a id="game2Link" href="#" draggable="false">
+                <img id="game2" class="recommendedgameicon">
             </a>
-            <a id="game3Link" href="#">
-               <img id="game3" class="recommendedgameicon">
+            <a id="game3Link" href="#" draggable="false">
+                <img id="game3" class="recommendedgameicon">
             </a>
-            <a id="game4Link" href="#">
-               <img id="game4" class="recommendedgameicon">
+            <a id="game4Link" href="#" draggable="false">
+                <img id="game4" class="recommendedgameicon">
             </a>
-      </div>
-      </div>
+        </div>
       <div class="footer">
          <h1 class="footertext">© 2022-2023 FUSION</h1>
          </center>
          <button onclick="backtogame()" id="backtogame"><i class="fa-solid fa-arrow-up fa-xs" style="color: #ffffff;"></i>‎      ⬆      ‎ </button>
          <script src="js/backtotop.js"></script>
       </div>
+
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+             var recommendedGameLinks = document.querySelectorAll('.recommendedgames a');
+     
+             recommendedGameLinks.forEach(function (link) {
+                 link.addEventListener('dragstart', function (event) {
+                     event.preventDefault();
+                 });
+             });
+         });
+     </script>
 
 </div>
 </body>

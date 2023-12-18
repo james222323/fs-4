@@ -72,17 +72,20 @@ nav a:hover {
     text-decoration: none;
     color: #ecf0f1;
     transition: transform 0.3s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .game-link img {
     width: 200px;
     height: auto;
     border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .game-link:hover {
     transform: scale(1.1);
     color: #3498db;
+    font-family: 'Montserrat', sans-serif;
 }
 
 section {
@@ -103,12 +106,14 @@ section {
     margin: 10px;
     text-decoration: none;
     color: #ecf0f1; /* Light Grey */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .game-link img {
     width: 200px; /* Adjust the width based on your design */
     height: auto;
     border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 footer {
@@ -395,3 +400,51 @@ footer {
    }
  }
  
+
+ .search-container {
+   margin: 20px 0;
+   text-align: center;
+   position: relative;
+   animation: fadeInUp 0.5s ease-out; /* Add animation */
+}
+
+input[type="text"] {
+   padding: 15px;
+   width: 50px;
+   border-radius: 25px; /* Make it round */
+   outline: none;
+   background-color: #ccc; /* Grey background color */
+   font-family: 'Montserrat', sans-serif; /* Use Montserrat Bold font */
+   color: #ffffff;
+   transition: width 0.3s ease-out; /* Add transition */
+}
+
+button {
+   padding: 8px;
+   cursor: pointer;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+   from {
+       opacity: 0;
+       transform: translateY(20px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+/* Add hover effect for the search input */
+input[type="text"]:focus {
+   width: 300px;
+}
+
+/* Add styles for the no games found message */
+.no-games-found {
+   text-align: center;
+   font-size: 18px;
+   color: #ff0000; /* Red color */
+   margin-top: 20px;
+}

@@ -1,22 +1,53 @@
- .record-label {
-            font-size: 50px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-        .record {
-            font-size: 35px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            background-color: transparent;
-            border: 1px solid #8668FF; /* You can add a border if needed */
-            max-width: 40px;
-            color: #ffffff;
-        }
-        .record:focus {
-            border-color: #8668FF; /* Change border color on focus */
-             outline: none; /* Remove the default focus outline (optional) */
-        }
+    <nav class="tgcnavbar">
+        <div class="navbuttons">
+            <div class="logo">
+                <img src="images/main.png" alt="">
+            </div>
+            <a href="#"><i class="material-icons"></i></a>
+            <a href="index.html"><i class="material-icons">home</i>Home</a>
+            <a href="sm.html"><i class="material-icons">sports_esports</i>Games</a>
+            <a href="javascript:void(0);" class="nav-link" onclick="openLink()"><i class="material-icons">casino</i>Random</a>
+            <a href="leaderboards.html"><i class="material-icons">leaderboard</i>Leaderboards</a>
+            <a href="form.html"><i class="material-icons">article</i>Request</a>
+            <a href="settings.html"><i class="material-icons">settings</i>Settings</a>
+        </div>
+    </nav>
 
 
 
-        <input type="text" id="record-input" class="record" value=" " maxlength="2">
+
+
+
+    
+    <h1 class="title">All Games:</h1>
+    <div id="games" style="display: grid; margin-bottom: 3vw;">
+        <!-- Games will be dynamically added here -->
+    </div>
+
+    <button onclick="backtogame()" id="backtogame">
+        <i class="fa-solid fa-arrow-up fa-xs" style="color: #ffffff;"></i>‎ ⬆ ‎ </button>
+    <script src="../js/backtotop.js"></script>
+
+    <footer class="footer">
+        <p class="footertext">&copy; 2023 FUSION. All rights reserved.</p>
+    </footer>
+
+
+    <button onclick="backtogame()" id="backtogame">
+        <i class="fa-solid fa-arrow-up fa-xs" style="color: #ffffff;"></i>‎ ⬆ ‎ </button>
+    <script src="../js/backtotop.js"></script>
+
+    <footer class="footer">
+        <p class="footertext">&copy; 2023 FUSION. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/randomgame.js"></script>
+    <script src="js/panickey.js"></script>
+
+      {
+    "name": "Baldi's Basics",
+    "imageUrl": "/images/games/basic.webp",
+    "link": "view.html?game=games/bb/index.html&title=Baldi's Basics&image=images/games/basic.webp&creator=Micah McGonigal&file=file",
+    "by": "Micah McGonigal"
+  }

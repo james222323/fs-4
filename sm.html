@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Game Website</title>
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
 
-    <!-- Navigation Bar with Logo -->
+    <!-- ... (rest of the HTML remains unchanged) ... -->
     <nav class="tgcnavbar">
         <div class="navbuttons">
             <div class="logo">
@@ -20,33 +20,79 @@
             </div>
             <a href="#"><i class="material-icons"></i></a>
             <a href="index.html"><i class="material-icons">home</i>Home</a>
-             <a href="sm.html"><i class="material-icons">sports_esports</i>Games</a>
+            <a href="sm.html"><i class="material-icons">sports_esports</i>Games</a>
             <a href="javascript:void(0);" class="nav-link" onclick="openLink()"><i class="material-icons">casino</i>Random</a>
             <a href="leaderboards.html"><i class="material-icons">leaderboard</i>Leaderboards</a>
             <a href="form.html"><i class="material-icons">article</i>Request</a>
             <a href="settings.html"><i class="material-icons">settings</i>Settings</a>
-            
-    
         </div>
     </nav>
+
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search" oninput="searchGames()">
+    </div>
 
     <h1 class="title">All Games:</h1>
     <div id="games" style="display: grid; margin-bottom: 3vw;">
         <!-- Games will be dynamically added here -->
     </div>
 
-      <button onclick="backtogame()" id="backtogame">
-        <i class="fa-solid fa-arrow-up fa-xs" style="color: #ffffff;"></i>‎      ⬆      ‎ </button>
+    <!-- Add a container for the no games found message -->
+    <div id="noGamesFound" class="no-games-found" style="display:none;">
+        No games found.
+    </div>
+
+    <!-- ... (rest of the HTML remains unchanged) ... -->
+
+
+    <button onclick="backtogame()" id="backtogame">
+        <i class="fa-solid fa-arrow-up fa-xs" style="color: #ffffff;"></i>‎ ⬆ ‎ </button>
     <script src="../js/backtotop.js"></script>
 
     <footer class="footer">
         <p class="footertext">&copy; 2023 FUSION. All rights reserved.</p>
     </footer>
 
-    <!-- Include the separate JavaScript file -->
+    <button onclick="backtogame()" id="backtogame">
+        <i class="fa-solid fa-arrow-up fa-xs" style="color: #ffffff;"></i>‎ ⬆ ‎ </button>
+    <script src="../js/backtotop.js"></script>
+
+    <footer class="footer">
+        <p class="footertext">&copy; 2023 FUSION. All rights reserved.</p>
+    </footer>
+
     <script src="js/main.js"></script>
     <script src="js/randomgame.js"></script>
     <script src="js/panickey.js"></script>
+
+    <script>
+        // JavaScript function to handle the search functionality
+        function searchGames() {
+            var input, filter, gamesContainer, games, game, i, txtValue, noGamesFound;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            gamesContainer = document.getElementById('games');
+            games = gamesContainer.getElementsByClassName('game');
+            noGamesFound = document.getElementById('noGamesFound');
+
+            let found = false;
+
+            for (i = 0; i < games.length; i++) {
+                game = games[i];
+                txtValue = game.textContent || game.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    game.style.display = '';
+                    found = true;
+                } else {
+                    game.style.display = 'none';
+                }
+            }
+
+            // Show or hide the no games found message
+            noGamesFound.style.display = found ? 'none' : 'block';
+        }
+    </script>
 
 </body>
 

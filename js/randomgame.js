@@ -1,29 +1,39 @@
+var chosenGames = [];
+var gameLinks;
 
-  var links = [
-    "/view.html?game=games/retro-bowl/index.html&title=Retro Bowl&image=images/games/retro-bowl.jpg&creator=New Star Games&file=Retro-Bowlfile",
-    "/view.html?game=games/monkey-mart/index.html&title=Monkey Mart&image=images/games/monkey-mart.png&creator=TinyDobbins&file=monkey-martfile",
-    "/view.html?game=games/1v1-lol/index.html&title=1v1 LOL&image=images/games/1v1-lol.png&creator=Lior Alterman&file=1v1-lolfile",
-    "/view.html?game=games/basketball-stars/index.html&title=Basketball Stars&image=images/games/basketball-stars.png&creator=Madpuffers&file=basketball-starsfile",
-    "/view.html?game=games/smash/index.html&title=Smash Remix&image=images/games/smash.jpg&creator=The Smashfather&file=smashfile",
-    "/view.html?game=games/slope/index.html&title=Slope&image=images/games/slope.jpg&creator=Rob Kay&file=slopefile"
-  ];
+// Function to load game links from JSON file
+function loadGameLinks() {
+  // Assuming the games.json file is in the same directory as your HTML file
+  fetch('games.json')
+    .then(response => response.json())
+    .then(data => {
+      gameLinks = data.map(game => game.link);
+    })
+    .catch(error => console.error('Error loading game links:', error));
+}
 
-  var chosenGames = [];
+// Call the function to load game links
+loadGameLinks();
 
-  function openLink() {
-    if (chosenGames.length === links.length) {
-      // All games have been chosen, reset the chosenGames array
-      chosenGames = [];
-    }
-
-    var availableGames = links.filter(game => !chosenGames.includes(game));
-    var chosenGame = availableGames[Math.floor(Math.random() * availableGames.length)];
-
-    // Add the chosen game to the chosenGames array
-    chosenGames.push(chosenGame);
-
-    // Update the parent location
-    window.location.href = chosenGame;
-
+function openLink() {
+  if (!gameLinks || gameLinks.length === 0) {
+    console.error('Game links not loaded. Make sure to call loadGameLinks() before using openLink().');
     return false;
   }
+
+  if (chosenGames.length === gameLinks.length) {
+    // All games have been chosen, reset the chosenGames array
+    chosenGames = [];
+  }
+
+  var availableGames = gameLinks.filter(game => !chosenGames.includes(game));
+  var chosenGame = availableGames[Math.floor(Math.random() * availableGames.length)];
+
+  // Add the chosen game to the chosenGames array
+  chosenGames.push(chosenGame);
+
+  // Update the parent location
+  window.location.href = chosenGame;
+
+  return false;
+}
