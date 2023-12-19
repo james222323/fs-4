@@ -268,6 +268,18 @@
     "imageUrl": "/images/games/gd.jpeg",
     "link": "view.html?game=games/gd/index.html&title=Geometry Dash&image=images/games/gd.jpeg&creator=RobTop&file=file",
     "by": "RobTop"
+  },
+  {
+    "name": "Idle Breakout",
+    "imageUrl": "/images/games/ib.png",
+    "link": "view.html?game=games/ib/index.html&title=Idle Breakout&image=images/games/ib.png&creator=Kodiqi&file=file",
+    "by": "Kodiqi"
+  },
+  {
+    "name": "Grand Theft Auto",
+    "imageUrl": "/images/games/gta.jpg",
+    "link": "view.html?game=games/gta/index.html&title=Grand Theft Auto&image=images/games/gta.jpg&creator=Rockstar Games&file=file",
+    "by": "Rockstar Games"
   }
   
 ]
